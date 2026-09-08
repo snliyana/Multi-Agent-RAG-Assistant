@@ -392,18 +392,20 @@ if prompt:
                     }
                 )
 
-            except requests.exceptions.RequestException:
+            except requests.exceptions.RequestException as e:
 
-                error_message = (
-                    "Unable to connect to the backend API."
-                )
+    error_message = (
+        f"Unable to connect to the backend API.\n\n"
+        f"API URL: {API_URL}\n\n"
+        f"Error: {str(e)}"
+    )
 
-                st.error(error_message)
+    st.error(error_message)
 
-                st.session_state.messages.append(
-                    {
-                        "role": "assistant",
-                        "content": error_message,
-                        "agent": "system",
-                    }
-                )
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": error_message,
+            "agent": "system",
+        }
+    )
