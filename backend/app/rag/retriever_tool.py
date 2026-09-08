@@ -1,14 +1,10 @@
 from langchain_core.tools import tool
 from langchain_chroma import Chroma
-from langchain_huggingface import HuggingFaceEmbeddings
 
-
-CHROMA_DIR = "data/chroma_db"
-COLLECTION_NAME = "rag_documents"
-
-
-embedding_model = HuggingFaceEmbeddings(
-    model_name="BAAI/bge-small-en-v1.5"
+from backend.app.rag.vector_store import (
+    CHROMA_DIR,
+    COLLECTION_NAME,
+    get_embedding_model,
 )
 
 
@@ -19,7 +15,8 @@ def search_document(query: str) -> str:
     and return relevant text chunks.
     """
 
-    # Open the latest vector database each time
+    embedding_model = get_embedding_model()
+
     vector_store = Chroma(
         persist_directory=CHROMA_DIR,
         embedding_function=embedding_model,
