@@ -14,6 +14,14 @@ The system uses a supervisor-based architecture to automatically route user quer
 
 ---
 
+## 🖥️ Application Preview
+
+![AgentHub AI Application](assets/agenthub-demo.png)
+
+The interface demonstrates supervisor-based routing to specialized agents. In this example, a stock market query is automatically routed to the **Finance Agent**.
+
+---
+
 ## ✨ Features
 
 - 🧠 **Supervisor-based routing** — routes queries to specialized agents
