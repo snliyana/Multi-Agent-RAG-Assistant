@@ -1,0 +1,31 @@
+# Virtual environment
+venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit
+.streamlit/
+
+# Chroma vector database
+data/chroma_db/
+
+# Uploaded documents
+data/uploads/
+
+# Test PDF
+data/sample.pdf
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
