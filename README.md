@@ -4,6 +4,12 @@ A multi-agent AI assistant built using **LangGraph, LangChain, Groq, FastAPI, St
 
 The system uses a supervisor-based architecture to automatically route user queries to specialized AI agents for research, weather information, financial data, Python calculations, document question answering, and general conversation.
 
+## 🚀 Live Demo
+
+Try the deployed application here:
+
+👉 [Launch AgentHub AI](https://snliyana-multi-agent-rag-assistant-frontendapp-ukyhqa.streamlit.app/)
+
 ## ✨ Features
 
 - 🧠 **Supervisor Agent** – Routes user queries to the appropriate specialized agent
